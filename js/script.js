@@ -153,3 +153,50 @@ function quadradoDaSoma() {
 
     alert("O quadrado da soma dos três valores é: " + quadradoSoma);
 }
+
+function calcularProdutoESoma() {
+    let A = parseInt(prompt("Digite o valor de A:"));
+    let B = parseInt(prompt("Digite o valor de B:"));
+    let C = parseInt(prompt("Digite o valor de C:"));
+    let D = parseInt(prompt("Digite o valor de D:"));
+
+    let produtoP = A * C;
+    let somaS = B + D;
+
+    alert("O produto do primeiro com o terceiro valor (P) é: " + produtoP + "\n" +
+          "A soma do segundo com o quarto valor (S) é: " + somaS);
+}
+
+function calcularNovoSalario() {
+    let salarioMensal = parseFloat(prompt("Digite o valor do salário mensal:"));
+    let percentualReajuste = parseFloat(prompt("Digite o percentual de reajuste (%):"));
+
+    let novoSalario = salarioMensal * (1 + percentualReajuste / 100);
+
+    alert("O novo salário é: R$" + novoSalario.toFixed(2));
+}
+
+function apurarEleicao() {
+    let votosCandidatoA = parseInt(prompt("Digite a quantidade de votos válidos para o candidato A:"));
+    let votosCandidatoB = parseInt(prompt("Digite a quantidade de votos válidos para o candidato B:"));
+    let votosCandidatoC = parseInt(prompt("Digite a quantidade de votos válidos para o candidato C:"));
+    let votosNulos = parseInt(prompt("Digite a quantidade de votos nulos:"));
+    let votosBranco = parseInt(prompt("Digite a quantidade de votos em branco:"));
+
+    let totalEleitores = votosCandidatoA + votosCandidatoB + votosCandidatoC + votosNulos + votosBranco;
+
+    let percentualVotosValidos = ((votosCandidatoA + votosCandidatoB + votosCandidatoC) / totalEleitores) * 100;
+    let percentualCandidatoA = (votosCandidatoA / totalEleitores) * 100;
+    let percentualCandidatoB = (votosCandidatoB / totalEleitores) * 100;
+    let percentualCandidatoC = (votosCandidatoC / totalEleitores) * 100;
+    let percentualNulos = (votosNulos / totalEleitores) * 100;
+    let percentualBranco = (votosBranco / totalEleitores) * 100;
+
+    alert("Número total de eleitores: " + totalEleitores +
+          "\nPercentual de votos válidos: " + percentualVotosValidos.toFixed(2) + "%" +
+          "\nPercentual de votos do candidato A: " + percentualCandidatoA.toFixed(2) + "%" +
+          "\nPercentual de votos do candidato B: " + percentualCandidatoB.toFixed(2) + "%" +
+          "\nPercentual de votos do candidato C: " + percentualCandidatoC.toFixed(2) + "%" +
+          "\nPercentual de votos nulos: " + percentualNulos.toFixed(2) + "%" +
+          "\nPercentual de votos em branco: " + percentualBranco.toFixed(2) + "%");
+}
